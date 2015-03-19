@@ -15,6 +15,10 @@ shinyUI(fluidPage(
     # Sidebar with a slider input for number of bins
     sidebarLayout(
          sidebarPanel(
+             # instructions
+             p("note"),
+
+             # Choose a variable to display
              selectInput("var",
                          label = "Choose a variable to display",
                          choices = c("cyl", "gear"),
