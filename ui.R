@@ -20,6 +20,7 @@ shinyUI(fluidPage(
              pre("
 - add axis labels, title, etc
 - add instructions
+- add citation/footnote
 "),
              # instructions
              p("note"),
@@ -37,7 +38,10 @@ shinyUI(fluidPage(
                         tabPanel("Plot", plotOutput("distPlot")),
                         tabPanel("Summary", verbatimTextOutput("summary"))
                         #tabPanel("Help", includeMarkdown("include.md"))
-            )
+            ),
+
+            # Citation / data source
+            p("Citation:")
         )
     )
 ))
