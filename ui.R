@@ -9,25 +9,35 @@ library(shiny)
 shinyUI(fluidPage(
 
     # Application title
-    titlePanel("GAMUT Data"),
+    titlePanel("STEMI Data"),
 
     # Sidebar with a slider input for number of bins
     sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30),
-            includeMarkdown("include.md")
-        ),
+         sidebarPanel(
+             selectInput("var",
+                         label = "Choose a variable to display",
+                         choices = c("cyl", "gear"),
+                         selected = "cyl")
+               ),
 
         # Show a plot of the generated distribution
         mainPanel(
             tabsetPanel(type = "tabs",
-                        tabPanel("Plot", plotOutput("distPlot"))
+                        tabPanel("Plot", plotOutput("distPlot")),
+                        tabPanel("Summary", verbatimTextOutput("summary"))
                         #tabPanel("Help", includeMarkdown("include.md"))
             )
         )
     )
 ))
+
+
+
+#
+#         sidebarPanel(
+#             selectInput("var",
+#                         label = "Choose a variable to display",
+#                         choices = c("cyl", "gear"),
+#                         selected = "cyl")
+#
+#
