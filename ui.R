@@ -25,8 +25,8 @@ shinyUI(fluidPage(
         # Show a plot of the generated distribution
         mainPanel(
             tabsetPanel(type = "tabs",
-                        tabPanel("Plot", plotOutput("distPlot")),
-                        tabPanel("Help", includeMarkdown("include.md"))
+                        tabPanel("Plot", plotOutput("distPlot"))
+                        #tabPanel("Help", includeMarkdown("include.md"))
             )
         )
     )
