@@ -6,19 +6,16 @@
 
 library(shiny)
 
-mydata <- readRDS("data/GAMUT.rds")
+mydata <- mtcars
 
 
 shinyServer(function(input, output) {
 
     output$distPlot <- renderPlot({
 
-        # generate bins based on input$bins from ui.R
-        x    <- mydata$den
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+        # generage boxplots of selected variable
+        boxplot(mydata$mpg ~ mydata[, input$var])
 
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
 
     })
 })
