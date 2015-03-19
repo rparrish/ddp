@@ -26,7 +26,7 @@ shinyUI(fluidPage(
              p("note"),
 
              # Choose a variable to display
-             selectInput("var",
+             radioButtons("var",
                          label = "Choose a variable to display",
                          choices = c("cyl", "gear"),
                          selected = "cyl")
