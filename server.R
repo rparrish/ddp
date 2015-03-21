@@ -21,4 +21,15 @@ shinyServer(function(input, output) {
 
 
     })
+
+    output$dataTable <- renderDataTable(
+
+        # generate data table
+        mtcars,
+        options = list(
+            pageLength = 10
+        )
+
+    )
 })
+

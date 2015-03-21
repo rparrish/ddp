@@ -29,7 +29,7 @@ shinyUI(fluidPage(
         mainPanel(
             tabsetPanel(type = "tabs",
                         tabPanel("Plot", plotOutput("distPlot")),
-                        tabPanel("Summary", verbatimTextOutput("summary"))
+                        tabPanel("Data", dataTableOutput("dataTable"))
                         #tabPanel("Help", includeMarkdown("include.md"))
             ),
 
