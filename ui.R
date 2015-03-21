@@ -15,14 +15,8 @@ shinyUI(fluidPage(
     # Sidebar with a slider input for number of bins
     sidebarLayout(
          sidebarPanel(
-             # todo
-             h2("todo"),
-             pre("
-- add instructions
-- add citation/footnote
-"),
              # instructions
-             p("note"),
+             p("This application displays a boxplot of the miles per gallon by number of cylinders or gears. "),
 
              # Choose a variable to display
              radioButtons("var",
@@ -40,7 +34,11 @@ shinyUI(fluidPage(
             ),
 
             # Citation / data source
-            p("Citation:")
+            h3("References"),
+            tags$cite("  R Core Team (2014). R: A language and environment for statistical computing. R Foundation for
+  Statistical Computing, Vienna, Austria. URL http://www.R-project.org/."),
+            p(),
+            tags$cite("Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391–411.")
         )
     )
 ))
