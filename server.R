@@ -14,7 +14,10 @@ shinyServer(function(input, output) {
     output$distPlot <- renderPlot({
 
         # generage boxplots of selected variable
-        boxplot(mydata$mpg ~ mydata[, input$var])
+        boxplot(mydata$mpg ~ mydata[, input$var],
+                main = paste("Miles per Gallon by number of", input$var),
+                ylab = "Miles Per Gallon",
+                xlab = paste("Number of", input$var))
 
 
     })
