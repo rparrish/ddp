@@ -18,7 +18,6 @@ shinyUI(fluidPage(
              # todo
              h2("todo"),
              pre("
-- add axis labels, title, etc
 - add instructions
 - add citation/footnote
 "),
