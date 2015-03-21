@@ -22,7 +22,7 @@ knit        : slidify::knit2slides
 
  - This application displays a boxplot of the miles per gallon  
 by number of cylinders or gears. 
- - Intended use is for Exploratory Data Analysis of the mtcars dataset (included in R.)
+ - Intended use is for Eploratory Data Analysis of the mtcars dataset (included in R.)
 
 --- 
    
@@ -45,9 +45,13 @@ The boxplot will update based on which variable is selected.
 ## Embedded R code
 
 This presentation was generated on   
-```{r }
-Sys.Date()
 
+```r
+Sys.Date()
+```
+
+```
+## [1] "2015-03-19"
 ```
 
 
